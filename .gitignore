@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Caches and logs
+*.log
+*.tmp
+.cache/
+
+# Datasets (Large Market-1501 and partitions)
+Market-1501-v15.09.15/
+Market-1501-v15.09.15.zip
+bounding_box_train/
+bounding_box_test/
+query/
+gt_bbox/
+gt_query/
+
+# Web App uploads / temporary generated videos
+web_app/static/uploads/*
+!web_app/static/uploads/.gitkeep
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

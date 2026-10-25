@@ -1,0 +1,98 @@
+{
+  "dataset": "Market-1501-v15.09.15",
+  "baseline_evaluation": {
+    "full_system": {
+      "rank1": 8.93705463182898,
+      "rank5": 22.743467933491686,
+      "rank10": 31.532066508313537,
+      "map": 7.214495226289887
+    },
+    "standard_full_body": {
+      "rank1": 47.62470308788598,
+      "rank5": 73.42636579572446,
+      "rank10": 81.94774346793349,
+      "map": 37.864361741803506
+    },
+    "baseline_cnn_dress": {
+      "rank1": 33.966745843230406,
+      "rank5": 60.36223277909739,
+      "rank10": 70.48693586698337,
+      "map": 26.495433454422507
+    }
+  },
+  "open_set_low_variance": {
+    "full_hybrid_system": {
+      "far_at_tar90": 100.0,
+      "far_at_tar95": 100.0,
+      "tpir_at_fpir1": 34.82428115015975
+    },
+    "standard_full_body": {
+      "far_at_tar90": 100.0,
+      "far_at_tar95": 100.0,
+      "tpir_at_fpir1": 11.182108626198083
+    },
+    "baseline_cnn_dress": {
+      "far_at_tar90": 100.0,
+      "far_at_tar95": 100.0,
+      "tpir_at_fpir1": 4.792332268370607
+    }
+  },
+  "component_ablation_study": [
+    {
+      "name": "Full Proposed System",
+      "rank1": 8.93705463182898,
+      "far_at_tar95": 100.0
+    },
+    {
+      "name": "w/o GaitPart (No Temporal Data)",
+      "rank1": 7.393111638954869,
+      "far_at_tar95": 100.0
+    },
+    {
+      "name": "w/o EVT Calibration (Raw Cosine)",
+      "rank1": 8.93705463182898,
+      "far_at_tar95": 100.0
+    },
+    {
+      "name": "w/o GeM Pooling (Standard GAP)",
+      "rank1": 11.223277909738718,
+      "far_at_tar95": 100.0
+    },
+    {
+      "name": "w/o ArcFace Margin (Standard CE)",
+      "rank1": 35.39192399049881,
+      "far_at_tar95": 100.0
+    }
+  ],
+  "published_benchmarks_reference": {
+    "IDE_ResNet50": {
+      "rank1": 85.3,
+      "map": 68.8
+    },
+    "PCB_RPP": {
+      "rank1": 93.8,
+      "map": 81.6
+    },
+    "BoT_StrongBaseline": {
+      "rank1": 94.5,
+      "map": 85.9
+    },
+    "MGN": {
+      "rank1": 95.7,
+      "map": 86.9
+    },
+    "OSNet": {
+      "rank1": 94.8,
+      "map": 84.9
+    },
+    "TransReID": {
+      "rank1": 95.2,
+      "map": 88.9
+    }
+  },
+  "evt_parameters": {
+    "min_val": 0.391768217086792,
+    "shape": 4.120453109761394,
+    "scale": 0.21694801481851966
+  }
+}
